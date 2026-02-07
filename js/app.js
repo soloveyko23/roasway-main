@@ -23525,10 +23525,6 @@
                     };
                     if (!state.headerCells.length || !state.rows.length) throw new Error("Отсутствуют заголовки или строки в одной из таблиц.");
                     state.isFlexible = state.headerCells.length < 7;
-                    if (state.headerCells.length > 14) {
-                        const tableBody = table.querySelector(".table-type-one__body");
-                        if (tableBody) tableBody.style.paddingRight = "10%";
-                    }
                     this.calculateColumnWidths(state);
                     this.setupCells(state);
                     this.setupResizableHeaders(state);
